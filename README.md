@@ -1,17 +1,4 @@
 
-git remote add origin https://github.com/neeleshgupta27/neel-app.git
-git push -u origin master
-
-------------------------------------------------------------------------------------------------
-ng build --prod --base-href https://neeleshgupta27.github.io/neel-app/
-ngh
-
--------- or --------
-if outputPath under angular.json file as "dist/[project-name]"
-ng build --prod --output-path neel-app --base-href https://neeleshgupta27.github.io/neel-app/
-ngh --dir dist/[project-name]
-
-
 
 ------------------------------------------------------------------------------------------------
 # NeelApp
