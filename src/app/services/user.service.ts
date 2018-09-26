@@ -14,12 +14,12 @@ export class UserService {
 
   getUsersData(){
     let users;
-    return this.httpClient.get('http://localhost:3000/users');
+    return this.httpClient.get('https://my-json-server.typicode.com/neeleshgupta27/neel-app/users');
   }
 
   getUsers(){
     let users;
-    this.httpClient.get('http://localhost:3000/users').subscribe((res : User[])=>{
+    this.httpClient.get('https://my-json-server.typicode.com/neeleshgupta27/neel-app/users').subscribe((res : User[])=>{
       console.log("res::"+res);
       this.usersData= res;
       console.log("this.usersData:"+this.usersData);
@@ -30,7 +30,7 @@ export class UserService {
    getUsersWithPromise(){
     let promise = new Promise((resolve, reject) => {
 
-      this.httpClient.get('http://localhost:3000/users')
+      this.httpClient.get('https://my-json-server.typicode.com/neeleshgupta27/neel-app/users')
           .toPromise()
           .then(
             (res : User[]) => { // Success
@@ -70,7 +70,7 @@ export class UserService {
         console.log("new this.idCount:"+this.idCount);
 
         userObj.id = this.idCount++;
-        this.httpClient.post('http://localhost:3000/users',userObj
+        this.httpClient.post('https://my-json-server.typicode.com/neeleshgupta27/neel-app/users',userObj
         /*{
           "id":this.idCount++,
           "first_name":"neelesh",
@@ -90,7 +90,7 @@ export class UserService {
    deleteUser(userId){
     let search = new URLSearchParams();
     search.set('id', userId);
-    let url = 'http://localhost:3000/users/' + userId;
+    let url = 'https://my-json-server.typicode.com/neeleshgupta27/neel-app/users/' + userId;
     this.httpClient.delete(url).subscribe((res)=>{
           console.log(res);
           console.log("Delete call successful value returned in body", res);
