@@ -1,0 +1,13 @@
+<h2>ng-template Examples:</h2>
+
+<h4>
+  Angular 4 uses the '<'ng-template'>' as the tag instead of '<'template'>' which is used in Angular2. 
+  The reason Angular 4 changed '<'template'>' to '<'ng-template'>' is because there is a name conflict between the '<'template'>' tag and the html '<'template'>' standard tag. 
+  It will deprecate completely going ahead. This is one of the major changes in Angular 4.
+</h4>
+
+<div>
+    <span *ngIf = "isavailable;then condition1 else condition2">Condition is valid.</span>
+    <ng-template #condition1>Condition is valid from template</ng-template>
+    <ng-template #condition2>Condition is invalid from template</ng-template>
+ </div>

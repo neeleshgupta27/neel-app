@@ -1,0 +1,22 @@
+<h2>Event Binding Examples:</h2>
+
+<h4>1. we have defined a button and added a function to it using the click event.</h4>
+<div>
+<button (click)="myClickFunction($event)">
+  Click Me
+</button>
+</div>
+
+<br>
+
+<h4>2. now add the change event to the dropdown.</h4>
+<div>
+  <div> Months :
+    <select (change) = "changemonths($event)">
+       <option *ngFor = "let i of months">{{i}}</option>
+    </select>
+ </div>
+</div>
+
+<br>
+

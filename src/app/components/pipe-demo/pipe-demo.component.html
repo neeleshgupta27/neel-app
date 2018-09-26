@@ -1,0 +1,51 @@
+<h2>PIPE Examples:</h2>
+  <table>
+    <tr>
+      <td>Lowercase Pipe:</td>
+      <td>{{userMessage | lowercase}}</td>
+    </tr>
+    <tr>
+      <td>Uppercase Pipe:</td>
+      <td>{{userMessage | uppercase}}</td>
+    </tr>
+    <tr>
+      <td>Currency Pipe:</td>
+      <td><b>{{6589.23 | currency:"INR"}}</b><br/>
+        <b>{{6589.23 | currency:"USD":true}}</b> //Boolean true is used to get the sign of the currency.
+      </td>
+    </tr>
+    <tr>
+      <td>Date Pipe:</td>
+      <td><b>{{todaydate | date:'d/M/y'}}</b><br/>
+        <b>{{todaydate | date:'shortTime'}}</b>
+      </td>
+    </tr>
+    <tr>
+      <td>Decimal Pipe:</td>
+      <td><b>{{ 454.78787814 | number: '3.4-4' }}</b> // 3 is for main integer, 4 -4 are for integers to be displayed.
+      </td>
+    </tr>
+    <tr>
+      <td>Json Pipe:</td>
+      <td>{{ jsonval | json }}
+      </td>
+    </tr>
+    <tr>
+      <td>Percent Pipe:</td>
+      <td>{{00.54565 | percent}}
+      </td>
+    </tr>
+    <tr>
+      <td>Slice Pipe:</td>
+      <td><b>{{months | slice:2:6}}</b> 
+        // here 2 and 6 refers to the start and the end index
+      </td>
+    </tr>
+    <tr>
+      <td>Custom Pipe:</td>
+      <td><b>Square root of 25 is: {{25 | sqrt}}</b>
+        <br/>
+        <b>Square root of 729 is: {{729 | sqrt}}</b>
+      </td>
+    </tr>
+  </table>

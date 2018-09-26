@@ -1,0 +1,34 @@
+<h2>Data Binding Examples:</h2>
+
+<h4>1. The syntax for in Angular is *ngFor = “let I of months” and to get the value of months we are displaying it in i.</h4>
+<div > Months :
+  <select>
+     <option *ngFor="let i of months">{{i}}</option>
+  </select>
+  // uses *ngFor loop here 
+</div>
+<br>
+
+<h4>2. Let us now display the data in the browser based on condition. Here, we have added a variable and assigned the value as true. Using the if statement, we can hide/show the content to be displayed.</h4>
+<div>
+  <span *ngIf = "isavailable"><b>Condition is valid.</b></span> 
+  //over here based on if condition the text condition is valid is displayed. 
+  If the value of isavailable is set to false it will not display the text.
+</div>
+<br>
+
+<h4>3. Let us try the above example using the IF THEN ELSE condition</h4>
+<div>
+  <span *ngIf="isVisible; else condition0">Visible Condition is valid.</span>
+  <ng-template #condition0><b>Visible Condition is invalid</b></ng-template>
+</div>
+<br>
+
+<h4>4. f the variable is true, then condition1, else condition2. Now, two templates are created with id #condition1 and #condition2.</h4>
+<div>
+  <span *ngIf="isVisible; then condition1 else condition2">Condition is valid.</span>
+  <ng-template #condition1>Condition is valid</ng-template>
+  <ng-template #condition2>Condition is invalid</ng-template>
+</div>
+
+

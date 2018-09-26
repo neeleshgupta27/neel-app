@@ -1,0 +1,28 @@
+<p>
+  index works!
+</p>
+<h2>Users</h2>
+  <ul>
+    <button (click)="getUsers()">GET users</button>
+  </ul>
+
+  <table border="1">
+    <tr>
+      <th>id</th>
+      <th>first name</th>
+      <th>last name</th>
+      <th>email</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.first_name}}</td>
+      <td>{{user.last_name}}</td>
+      <td>{{user.email}}</td>
+      <td><a href="#" (click)="editUser([user.id])">Edit</a> | 
+        <a href="#" (click)="deleteUser([user.id])">Delete</a></td>
+      
+    </tr>
+
+  </table>
+ 

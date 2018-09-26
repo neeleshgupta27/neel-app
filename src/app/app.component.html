@@ -3,4 +3,35 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+    
+  <br>
+
+  <!-- 
+  <nav>
+    <a routerLink="create" routerLinkActive="active">Add</a> | 
+    <a routerLink="edit" routerLinkActive="active">Edit</a> | 
+    <a routerLink="index" routerLinkActive="active">Search Index</a> | 
+    <a routerLink="pipe-demo" routerLinkActive="active">PIPE Examples</a> | 
+    <a routerLink="directive-demo" routerLinkActive="active">Directive Examples</a> | 
+    <a routerLink="data-binding-demo" routerLinkActive="active">Data Binding Examples</a> | 
+    <a routerLink="event-binding-demo" routerLinkActive="active">Event Binding Examples</a> | 
+    <a routerLink="ng-template-demo" routerLinkActive="active">NG-Template Examples</a> | 
+    <a routerLink="mat-datatable-demo" routerLinkActive="active">Mat-DataTable Examples</a>
+  </nav> -->
+	<ul>
+	  <li><a routerLink="create" routerLinkActive="active">Add</a> </li>
+	  <li><a routerLink="edit" routerLinkActive="active">Edit</a> </li>
+      <li><a routerLink="index" routerLinkActive="active">Search Index</a> </li>
+      <li><a routerLink="pipe-demo" routerLinkActive="active">PIPE Examples</a></li> 
+      <li><a routerLink="directive-demo" routerLinkActive="active">Directive Examples</a></li>  
+	  <li><a routerLink="data-binding-demo" routerLinkActive="active">Data Binding Examples</a> </li> 
+      <li><a routerLink="event-binding-demo" routerLinkActive="active">Event Binding Examples</a> </li> 
+      <li><a routerLink="ng-template-demo" routerLinkActive="active">NG-Template Examples</a> </li>
+      <li><a routerLink="mat-datatable-demo" routerLinkActive="active">Mat-DataTable Examples</a></li>
+	</ul>
+
+  <router-outlet></router-outlet>
 </div>
+
+
+

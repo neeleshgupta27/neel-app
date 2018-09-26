@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+//import {UserService} from './services/user.service';
+
+//import {Observable} from 'rxjs/Rx';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'neel-app';
+  public users;
+  public salary;
+  title = 'Angular-App';
+
+  constructor() {}
+
+   
 }
