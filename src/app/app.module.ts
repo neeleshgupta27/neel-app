@@ -32,6 +32,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {NativeDateModule} from '@angular/material';
 import {MAT_DATE_FORMATS} from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { ModalDemoComponent } from './components/modal-demo/modal-demo.component';
+import { ModalComponent } from './components/modal-demo/_directive';
+import { ModalService } from './components/modal-demo/_service';
 
 
 //import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -65,7 +68,9 @@ export const MY_FORMATS = {
     EventBindingDemoComponent,
     NgTemplateDemoComponent,
     MatDatatableDemoComponent,
-    MatDatePickerDemoComponent
+    MatDatePickerDemoComponent,
+    ModalDemoComponent,
+    ModalComponent
   ],
   imports: [
     FormsModule,
@@ -83,6 +88,7 @@ export const MY_FORMATS = {
     NativeDateModule
   ],
   providers: [
+    ModalService,
     {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS}
   ],
   bootstrap: [AppComponent]
