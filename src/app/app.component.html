@@ -19,18 +19,33 @@
     <a routerLink="mat-datatable-demo" routerLinkActive="active">Mat-DataTable Examples</a>
   </nav> -->
 	<ul>
-	  <li><a routerLink="create" routerLinkActive="active">Create</a> </li>
-	  <!--<li><a routerLink="edit" routerLinkActive="active">Edit</a> </li>
-      -->
+      <li><a href="#">Angular Examples</a>
+        <ul>
+            <li><a routerLink="pipe-demo" routerLinkActive="active">PIPE Examples</a></li> 
+            <li><a routerLink="directive-demo" routerLinkActive="active">Directive Examples</a></li>  
+            <li><a routerLink="data-binding-demo" routerLinkActive="active">Data Binding Examples</a> </li> 
+            <li><a routerLink="event-binding-demo" routerLinkActive="active">Event Binding Examples</a> </li> 
+            <li><a routerLink="ng-template-demo" routerLinkActive="active">NG-Template Examples</a> </li>
+        </ul>  
+      </li>
+
+      <li><a routerLink="create" routerLinkActive="active">Create</a> </li>
+      <!--<li><a routerLink="edit" routerLinkActive="active">Edit</a> </li>-->
       <li><a routerLink="index" routerLinkActive="active">Search</a> </li>
-      
-	  <li><a routerLink="pipe-demo" routerLinkActive="active">PIPE Examples</a></li> 
-      <li><a routerLink="directive-demo" routerLinkActive="active">Directive Examples</a></li>  
-	  <li><a routerLink="data-binding-demo" routerLinkActive="active">Data Binding Examples</a> </li> 
-      <li><a routerLink="event-binding-demo" routerLinkActive="active">Event Binding Examples</a> </li> 
-      <li><a routerLink="ng-template-demo" routerLinkActive="active">NG-Template Examples</a> </li>
-      <li><a routerLink="mat-datatable-demo" routerLinkActive="active">Mat-DataTable Examples</a></li>
-      <li><a routerLink="mat-date-picker-demo" routerLinkActive="active">Mat-DatePicker Examples</a></li>
+
+      <!-- <li><a href="#">CRUD Examples</a>
+        <ul>
+          
+        </ul>  
+      </li>
+    -->
+	  
+    <li><a href="#">Material Examples</a>
+      <ul>
+        <li><a routerLink="mat-datatable-demo" routerLinkActive="active">Mat-DataTable Examples</a></li>
+        <li><a routerLink="mat-date-picker-demo" routerLinkActive="active">Mat-DatePicker Examples</a></li>
+      </ul>  
+    </li>
 	</ul>
 
   <router-outlet></router-outlet>
