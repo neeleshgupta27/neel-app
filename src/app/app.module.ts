@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
-  MatSortModule, MatTableModule } from "@angular/material";
+  MatSortModule, MatTableModule, MatRippleModule   } from "@angular/material";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
   
@@ -26,7 +26,27 @@ import { EventBindingDemoComponent } from './components/event-binding-demo/event
 import { NgTemplateDemoComponent } from './components/ng-template-demo/ng-template-demo.component';
 import { MatDatatableDemoComponent } from './components/mat-datatable-demo/mat-datatable-demo.component';
 import { MatSort } from '@angular/material';
+import { MatDatePickerDemoComponent } from './components/mat-date-picker-demo/mat-date-picker-demo.component';
 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {NativeDateModule} from '@angular/material';
+import {MAT_DATE_FORMATS} from '@angular/material';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+
+
+//import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
+export const MY_FORMATS = {
+  parse: {
+    dateInput: 'LL',
+  },
+  display: {
+    dateInput: 'LL',
+    monthYearLabel: 'MMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY',
+  },
+};
 
 @NgModule({
   declarations: [
@@ -44,10 +64,12 @@ import { MatSort } from '@angular/material';
     DataBindingDemoComponent,
     EventBindingDemoComponent,
     NgTemplateDemoComponent,
-    MatDatatableDemoComponent
+    MatDatatableDemoComponent,
+    MatDatePickerDemoComponent
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule, 
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
@@ -56,9 +78,14 @@ import { MatSort } from '@angular/material';
         MatPaginatorModule,
         MatSortModule,
         MatProgressSpinnerModule,
-		BrowserAnimationsModule
+		BrowserAnimationsModule,
+    MatDatepickerModule,
+    NativeDateModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

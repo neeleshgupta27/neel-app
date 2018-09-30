@@ -10,6 +10,7 @@ import { DataBindingDemoComponent } from './components/data-binding-demo/data-bi
 import { EventBindingDemoComponent } from './components/event-binding-demo/event-binding-demo.component';
 import { NgTemplateDemoComponent } from './components/ng-template-demo/ng-template-demo.component';
 import { MatDatatableDemoComponent } from './components/mat-datatable-demo/mat-datatable-demo.component';
+import { MatDatePickerDemoComponent } from './components/mat-date-picker-demo/mat-date-picker-demo.component';
 
 export const appRoutes: Routes = [
   { path: 'create', 
@@ -39,5 +40,8 @@ export const appRoutes: Routes = [
   },
   { path: 'mat-datatable-demo',
     component: MatDatatableDemoComponent
+  },
+  { path: 'mat-date-picker-demo',
+    component: MatDatePickerDemoComponent
   }
 ];

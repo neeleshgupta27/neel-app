@@ -1,0 +1,163 @@
+
+<table>
+  <tr>
+    <td>Basic datepicker</td>
+    <td>
+        <mat-form-field>
+            <input matInput [matDatepicker]="p1" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="p1"></mat-datepicker-toggle>
+            <mat-datepicker #p1></mat-datepicker>
+          </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>Datepicker start date:</td>
+    <td>
+        <mat-form-field>
+            <input matInput [matDatepicker]="p2" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="p2"></mat-datepicker-toggle>
+            <mat-datepicker #p2 startView="month" [startAt]="startDate"></mat-datepicker>
+          </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>Datepicker selected value</td>
+    <td>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker1" placeholder="Angular forms" [formControl]="date">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+          
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker2" placeholder="Angular forms (w/ deserialization)"
+                   [formControl]="serializedDate">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+          
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker3" placeholder="Value binding" [value]="date.value">
+            <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+            <mat-datepicker #picker3></mat-datepicker>
+          </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>Datepicker with min & max validation</td>
+    <td>
+        <mat-form-field class="example-full-width">
+            <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker4" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+            <mat-datepicker #picker4></mat-datepicker>
+          </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>Datepicker with filter validation(Prevent Saturday and Sunday from being selected)</td>
+    <td>
+        <mat-form-field class="example-full-width">
+            <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker5" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+            <mat-datepicker #picker5></mat-datepicker>
+          </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>Datepicker input and change events</td>
+    <td>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker6" placeholder="Input & change events"
+                   (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)">
+            <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+            <mat-datepicker #picker6></mat-datepicker>
+          </mat-form-field>
+          
+          <div class="example-events">
+            <div *ngFor="let e of events">{{e}}</div>
+          </div>
+    </td>
+  </tr>
+  <tr>
+    <td>Disabled datepicker</td>
+    <td>
+        <p>
+            <mat-form-field>
+              <input matInput [matDatepicker]="dp1" placeholder="Completely disabled" disabled>
+              <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+              <mat-datepicker #dp1></mat-datepicker>
+            </mat-form-field>
+          </p>
+          
+          <p>
+            <mat-form-field>
+              <input matInput [matDatepicker]="dp2" placeholder="Popup disabled">
+              <mat-datepicker-toggle matSuffix [for]="dp2" disabled></mat-datepicker-toggle>
+              <mat-datepicker #dp2></mat-datepicker>
+            </mat-form-field>
+          </p>
+          
+          <p>
+            <mat-form-field>
+              <input matInput [matDatepicker]="dp3" placeholder="Input disabled" disabled>
+              <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+              <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+            </mat-form-field>
+          </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Datepicker touch UI</td>
+    <td>
+        <mat-form-field class="example-full-width">
+            <input matInput [matDatepicker]="picker7" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker7></mat-datepicker>
+        </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>Datepicker open method</td>
+    <td>
+        <mat-form-field class="example-full-width">
+            <input matInput [matDatepicker]="picker8" placeholder="Choose a date">
+            <mat-datepicker #picker8></mat-datepicker>
+        </mat-form-field>
+        <button mat-raised-button (click)="picker8.open()">Open</button>
+    </td>
+  </tr>
+  <tr>
+    <td>Datepicker with different locale</td>
+    <td>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker9" placeholder="Different locale">
+            <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+            <mat-datepicker #picker9></mat-datepicker>
+          </mat-form-field>
+          
+          <button mat-button (click)="english()">English</button>
+          <button mat-button (click)="french()">French</button>
+          <button mat-button (click)="hindi()">Hindi</button>
+          
+    </td>
+  </tr>
+  <tr>
+    <td>Datepicker with custom formats</td>
+    <td>
+        <!-- <mat-form-field>
+            <input matInput [matDatepicker]="picker10" placeholder="Verbose datepicker" [formControl]="date">
+            <mat-datepicker-toggle matSuffix [for]="picker10"></mat-datepicker-toggle>
+            <mat-datepicker #picker10></mat-datepicker>
+          </mat-form-field>
+        -->
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+
+<br>
+<hr>

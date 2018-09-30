@@ -1,4 +1,10 @@
 
+npm install angular-material-datepicker
+
+npm install @angular/material-moment-adapter
+npm i moment
+
+
 ------------------------------------------------------------------------------------------------
 # NeelApp
 
