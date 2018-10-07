@@ -8,7 +8,7 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 })
 export class MatDatatableDemoComponent implements OnInit {
 
-  displayedColumns = ['position', 'firstName', 'lastName', 'email'];
+  displayedColumns = ['id', 'firstName', 'lastName', 'email', 'action'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -34,19 +34,29 @@ export class MatDatatableDemoComponent implements OnInit {
     this.dataSource.filter = filterValue;
   }
 
+  onEdit(id){
+    console.log("edit id::"+id);
+  }
+
+  onDelete(id){
+    console.log("delete id::"+id);
+  }
+
 }
 
 export interface Element {
-  position: number;
+  id: number;
   firstName: string;
   lastName: string;
   email: string;
 }
 
 const ELEMENT_DATA: Element[] = [
-  {position: 1, firstName: 'John', lastName: 'Doe', email: 'john@gmail.com'},
-  {position: 2, firstName: 'Mike', lastName: 'Hussey', email: 'mike@gmail.com'},
-  {position: 3, firstName: 'Ricky', lastName: 'Hans', email: 'ricky@gmail.com'},
-  {position: 4, firstName: 'Martin', lastName: 'Kos', email: 'martin@gmail.com'},
-  {position: 5, firstName: 'Tom', lastName: 'Paisa', email: 'tom@gmail.com'}
+  {id: 1, firstName: 'John', lastName: 'Doe', email: 'john@gmail.com'},
+  {id: 2, firstName: 'Mike', lastName: 'Hussey', email: 'mike@gmail.com'},
+  {id: 3, firstName: 'Ricky', lastName: 'Hans', email: 'ricky@gmail.com'},
+  {id: 4, firstName: 'Martin', lastName: 'Kos', email: 'martin@gmail.com'},
+  {id: 5, firstName: 'Tom', lastName: 'Paisa', email: 'tom@gmail.com'},
+  {id: 6, firstName: 'Neelesh', lastName: 'Gupta', email: 'neelesh@gmail.com'},
+  {id: 7, firstName: 'Mark', lastName: 'Paisa', email: 'mark@gmail.com'} 
 ];

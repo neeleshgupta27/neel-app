@@ -8,7 +8,7 @@ import { ModalService } from './_service';
 })
 export class ModalDemoComponent implements OnInit {
 
-  private bodyText: string;
+  public bodyText: string;
 
   constructor(private modalService: ModalService) { }
 

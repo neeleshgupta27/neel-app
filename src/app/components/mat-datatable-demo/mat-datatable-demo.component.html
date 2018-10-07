@@ -9,9 +9,9 @@
 
 <mat-table #table [dataSource]="dataSource" matSort>
 
-  <ng-container matColumnDef="position">
+  <ng-container matColumnDef="id">
     <mat-header-cell *matHeaderCellDef mat-sort-header> No.</mat-header-cell>
-    <mat-cell *matCellDef="let project"> {{project.position}} </mat-cell>
+    <mat-cell *matCellDef="let project"> {{project.id}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="firstName">
@@ -29,9 +29,24 @@
     <mat-cell *matCellDef="let project"> {{project.email}} </mat-cell>
   </ng-container>
 
+  <ng-container matColumnDef="action">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>
+    <mat-cell *matCellDef="let project" (click)="$event.stopPropagation()">
+        <button mat-button (click)="onEdit(project.id)">
+            <mat-icon>Edit</mat-icon>
+        </button>
+        <button mat-button (click)="onDelete(project.id)">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </mat-cell>
+</ng-container>
+
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let project; columns: displayedColumns;"></mat-row>
 </mat-table>
 
-  <mat-paginator [pageSizeOptions]="[3, 5, 8, 15]" showFirstLastButtons></mat-paginator>
+  <mat-paginator [pageSize]="5" showFirstLastButtons></mat-paginator>
 </div>
+
+<!-- <mat-paginator [length]="100" [pageSizeOptions]="[3, 5, 8, 15]" showFirstLastButtons></mat-paginator> -->
+

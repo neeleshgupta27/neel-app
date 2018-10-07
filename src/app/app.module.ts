@@ -35,6 +35,8 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { ModalDemoComponent } from './components/modal-demo/modal-demo.component';
 import { ModalComponent } from './components/modal-demo/_directive';
 import { ModalService } from './components/modal-demo/_service';
+import { MatIconModule} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
 
 
 //import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -85,7 +87,8 @@ export const MY_FORMATS = {
         MatProgressSpinnerModule,
 		BrowserAnimationsModule,
     MatDatepickerModule,
-    NativeDateModule
+    NativeDateModule,
+    MatButtonModule, MatIconModule
   ],
   providers: [
     ModalService,
