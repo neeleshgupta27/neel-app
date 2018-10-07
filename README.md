@@ -4,6 +4,19 @@ npm install angular-material-datepicker
 npm install @angular/material-moment-adapter
 npm i moment
 
+#install material design icons to use for mat-icon tags
+npm install -g material-design-icons 
+
+#remove below line under package.json file if you don't want mat-icon classes
+"material-design-icons": "^3.0.1" 
+
+https://github.com/scttcper/ngx-toastr
+npm install ngx-toastr --save
+npm install @angular/animations --save
+
+https://foxandxss.github.io/angular-toastr/
+
+
 https://material.angular.io/components/datepicker/examples
 
 ------------------------------------------------------------------------------------------------

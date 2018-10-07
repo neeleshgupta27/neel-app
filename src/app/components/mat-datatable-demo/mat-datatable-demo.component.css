@@ -18,11 +18,13 @@
   
   .mat-table {
     overflow: auto;
-    max-height: 500px;
+    min-height: 190px;
+    max-height: 190px;
   }
   
   .mat-row{
-    min-height: 25px;
+    min-height: 30px;
+    max-height: 30px;
   }
   .mat-header-row{
     min-height: 30px;

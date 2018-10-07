@@ -38,6 +38,9 @@ import { ModalService } from './components/modal-demo/_service';
 import { MatIconModule} from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 //import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
@@ -88,7 +91,13 @@ export const MY_FORMATS = {
 		BrowserAnimationsModule,
     MatDatepickerModule,
     NativeDateModule,
-    MatButtonModule, MatIconModule
+    MatButtonModule, MatIconModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      //positionClass: 'toast-bottom-right',
+      //preventDuplicates: true,
+      progressBar: true
+    }) // ToastrModule added
   ],
   providers: [
     ModalService,

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-mat-datatable-demo',
@@ -14,7 +15,7 @@ export class MatDatatableDemoComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit() {
   }
@@ -36,10 +37,13 @@ export class MatDatatableDemoComponent implements OnInit {
 
   onEdit(id){
     console.log("edit id::"+id);
+    //this.toastr.success('Hello world!', 'Toastr fun!');
+    this.toastr.success('edit id::'+ id);
   }
 
   onDelete(id){
     console.log("delete id::"+id);
+    this.toastr.error('delete id::'+id);
   }
 
 }

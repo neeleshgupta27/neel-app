@@ -32,10 +32,10 @@
   <ng-container matColumnDef="action">
     <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>
     <mat-cell *matCellDef="let project" (click)="$event.stopPropagation()">
-        <button mat-button (click)="onEdit(project.id)">
-            <mat-icon>Edit</mat-icon>
+        <button mat-button mat-icon-button type="button" (click)="onEdit(project.id)">
+            <mat-icon>edit</mat-icon>
         </button>
-        <button mat-button (click)="onDelete(project.id)">
+        <button mat-button mat-icon-button (click)="onDelete(project.id)" type="button">
             <mat-icon>delete</mat-icon>
         </button>
     </mat-cell>
